@@ -2,7 +2,8 @@ console.log('JS OK')
 
 
 // Recupero gli elementi dal DOM
-const groceryList = document.getElementById('grocery-list');
+const groceryListFor = document.getElementById('grocery-list-for');
+const groceryListWhile = document.getElementById('grocery-list-while');
 
 
 //Creo un array con la lista della spesa
@@ -11,10 +12,22 @@ const listElement = ['Pane' , 'Carne' , 'Uova' , 'Latte' , 'Formaggio' , 'Cereal
 
 // FINCHÈ ci sono oggetti nella lista della spesa
 
-let listMessage = ''
+let listMessageFor = ''
 for(let i = 0; i < listElement.length; i++) {
-  listMessage += `<li>${listElement[i]}</li>`
+  listMessageFor += `<li>${listElement[i]}</li>`
 }
 
 // Stampo nel DOM gli oggetti 
-groceryList.innerHTML = listMessage
+groceryListFor.innerHTML = listMessageFor
+
+
+// FIN TANTO CHE ci sono elementi nella lista della spesa
+let currentIndex = 0
+let listMessageWhile = ''
+while(currentIndex < listElement.length){
+  listMessageWhile += `<li>${listElement[currentIndex]}</li>`
+  currentIndex++
+}
+
+// Stampo nel DOM gli elementi 
+groceryListWhile.innerHTML = listMessageWhile
