@@ -10,9 +10,9 @@ const groceryListWhile = document.getElementById('grocery-list-while');
 const listElement = ['Pane' , 'Carne' , 'Uova' , 'Latte' , 'Formaggio' , 'Cereali'];
 
 
-// FINCHÈ ci sono oggetti nella lista della spesa
-
 let listMessageFor = ''
+
+// FINCHÈ ci sono oggetti nella lista della spesa
 for(let i = 0; i < listElement.length; i++) {
   listMessageFor += `<li>${listElement[i]}</li>`
 }
@@ -21,9 +21,10 @@ for(let i = 0; i < listElement.length; i++) {
 groceryListFor.innerHTML = listMessageFor
 
 
-// FIN TANTO CHE ci sono elementi nella lista della spesa
 let currentIndex = 0
 let listMessageWhile = ''
+
+// FIN TANTO CHE ci sono elementi nella lista della spesa
 while(currentIndex < listElement.length){
   listMessageWhile += `<li>${listElement[currentIndex]}</li>`
   currentIndex++
